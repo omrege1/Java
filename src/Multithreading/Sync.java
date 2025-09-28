@@ -25,14 +25,14 @@ public class Sync {
                 }
             });
 
-        Thread thread2 = new Thread( new Runnable(){
-            public void run(){
-                for(int i=0; i<5; i++){
-                    brackets.printBrackets('{','}');
-                    System.out.println();
+            Thread thread2 = new Thread( new Runnable(){
+                public void run(){
+                    for(int i=0; i<5; i++){
+                        brackets.printBrackets('{','}');
+                        System.out.println();
+                    }
                 }
-            }
-        });
+            });
 
         thread1.start();
         thread2.start();
