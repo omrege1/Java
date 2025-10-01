@@ -1,4 +1,4 @@
-package P;
+package DesignPatterns;
 interface Product{
     void display();
 }
@@ -33,9 +33,9 @@ class ConcreteFactoryB implements Factory{
 
 
 
-public class Main {
+public class FactoryClasses {
     public static void main(String args[]){
-        Factory A = new ConcreteFactoryA();
+        Factory A = new ConcreteFactoryB();
         Product ap = A.factoryMethod();
         ap.display();
     }
