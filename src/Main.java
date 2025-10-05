@@ -98,6 +98,19 @@ public class Main {
 
                 System.out.println(s1 == s2);
                 System.out.println(s1.equals(s2));
+
+                Map<Integer, String> map = new HashMap<>();
+                map.put(1, "A");
+                map.put(2, "B");
+                map.put(3, "C");
+
+                for (Integer key : map.keySet()) {
+                    if (key == 2) {
+                        map.put(4, "D");   // <-- structural modification during iteration
+                    }
+                    System.out.println(key);
+                }
+
             }
             catch (Exception e){
                 throw e;
