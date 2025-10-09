@@ -1,6 +1,10 @@
 package LLD.ParkingLot;
 
+import LLD.ParkingLot.Model.Floor;
+import LLD.ParkingLot.Model.Slot;
+import LLD.ParkingLot.service.ParkingLot;
 import LLD.ParkingLot.Model.VehicleConstants.VehicleType;
+import LLD.ParkingLot.service.ParkingManager;
 
 public class Main {
     public static void main(String[] args) {
@@ -12,7 +16,7 @@ public class Main {
 
         for(Floor f : parkingLot.floors){
             for(Slot s : f.slots){
-                System.out.println("Availability of slots " + s.isFree + s.id);
+                System.out.println("Availability of slots " + s.getFree() + s.getId());
             }
 
         }

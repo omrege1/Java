@@ -1,4 +1,4 @@
-package LLD.ParkingLot;
+package LLD.ParkingLot.Model;
 
 import LLD.ParkingLot.Model.VehicleConstants.VehicleType;
 
@@ -7,9 +7,9 @@ import java.util.List;
 
 public class Floor {
     int floorNo;
-    List<Slot> slots = new ArrayList<>();
+    public List<Slot> slots = new ArrayList<>();
 
-    Floor(int floorNo, int carSlots, int bikeSlots){
+    public Floor(int floorNo, int carSlots, int bikeSlots){
         this.floorNo = floorNo;
         int id = 1;
         for(int i=1; i<=carSlots; i++){
